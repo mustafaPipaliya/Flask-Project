@@ -1,0 +1,8 @@
+<html>
+<body>
+{% for dict_item in data %}
+<p><b>Center {{ dict_item['name'] }}</b> - Its distance from your location is {{ dict_item['distance'] }} and it would take {{ dict_item['duration'] }} minutes to reach</p>
+</body>
+{% endfor %}
+
+</html>

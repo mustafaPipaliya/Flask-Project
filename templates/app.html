@@ -1,0 +1,44 @@
+<!-- Jinja Template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vaccine centres plot</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+            type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+            type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"
+            type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"
+            type="text/javascript" charset="utf-8"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css">
+    <style>
+
+        input[type=text] {
+            margin: 2px;
+        }
+
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h2>District: {{ district}} , State: {{ state }}, User Lat Long: {{userlat}}, {{userlng}}</h2>,
+    <div style="width: 100%; height: 600px" id="mapContainer"></div>
+    <span style="visibility: hidden" id="user_lat">{{userlat}}</span>
+    <span style="visibility: hidden" id="user_lng">{{userlng}}</span>
+    <span style="visibility: hidden" id="centreData">{{data}}</span>
+    <script src="/static/app.js"
+            type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
